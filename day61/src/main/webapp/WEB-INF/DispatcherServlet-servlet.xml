@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+<context:component-scan base-package="com.test.app.controller" />
+
+
+
+<!-- DS를 위한 스프링 컨테이너를 위한 설정파일. init()이 자동호출될적에 필요 -->
+<!-- 
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="viewResolver">
+	<property name="prefix" value="/WEB-INF/board/" />
+	<property name="suffix" value=".jsp" />
+</bean>
+	redirect:가 붙지않은 viewName을 보면, DS는 mav객체에서 M정보를 추출, req객체에 M정보를 저장해서 JSP 포워딩
+
+<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	<property name="mappings">
+		<props>
+			<prop key="/login.do">login</prop>
+			<prop key="/logout.do">logout</prop>
+			<prop key="/main.do">main</prop>
+			<prop key="/insertBoard.do">insertBoard</prop>
+			<prop key="/deleteBoard.do">deleteBoard</prop>
+			<prop key="/updateBoard.do">updateBoard</prop>
+			<prop key="/board.do">board</prop>
+			<prop key="/updateMember.do">updateMember</prop>
+			<prop key="/deleteMember.do">deleteMember</prop>
+			<prop key="/insertMember.do">insertMember</prop>
+		</props>
+	</property>
+</bean>
+
+<bean class="com.test.app.controller.member.LoginController" id="login" />
+<bean class="com.test.app.controller.member.LogoutController" id="logout" />
+<bean class="com.test.app.controller.board.BoardController" id="board" />
+<bean class="com.test.app.controller.board.InsertBoardController" id="insertBoard" />
+<bean class="com.test.app.controller.board.DeleteBoardController" id="deleteBoard" />
+<bean class="com.test.app.controller.board.UpdateBoardController" id="updateBoard" />
+<bean class="com.test.app.controller.board.MainController" id="main" />
+<bean class="com.test.app.controller.member.DeleteMemberController" id="deleteMember" />
+<bean class="com.test.app.controller.member.UpdateMemberController" id="updateMember" />
+<bean class="com.test.app.controller.member.InsertMemberController" id="insertMember" />
+ -->
+</beans>
